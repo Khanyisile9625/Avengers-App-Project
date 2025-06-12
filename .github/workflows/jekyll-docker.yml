@@ -18,3 +18,12 @@ jobs:
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+
+                    - name: Shipa Cloud
+  # You may pin to the exact commit or the version.
+  # uses: shipa-corp/shipa-gh-action@4633febbc36b24abb54f10b848c4aaca8a5b5745
+  uses: shipa-corp/shipa-gh-action@0.0.2
+  with:
+    # File path to Shipa action yml file
+    shipa-action: 
+          
